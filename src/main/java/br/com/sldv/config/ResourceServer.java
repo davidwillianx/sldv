@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -20,12 +19,16 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 @EnableResourceServer
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(securedEnabled = true)
-@ComponentScan("br.com.sldv.config")
+@ComponentScan("br.com.sldv")
 public class ResourceServer extends ResourceServerConfigurerAdapter {
-
 
     private UserDetailsService userDetails;
 
+
+
+    public ResourceServer(){
+        super();
+    }
 
     @Bean
     public AuthenticationProvider authProvider(){
@@ -34,7 +37,6 @@ public class ResourceServer extends ResourceServerConfigurerAdapter {
 
         authProvider = new DaoAuthenticationProvider();
         authProvider.setUserDetailsService(userDetails);
-
 
         return authProvider;
     }

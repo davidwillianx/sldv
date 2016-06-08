@@ -23,6 +23,7 @@ public class AuthServer extends AuthorizationServerConfigurerAdapter {
         super();
     }
 
+
     @Bean
     public TokenStore tokenStore(){
         //Its just 4 analysis
