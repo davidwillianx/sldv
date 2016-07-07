@@ -1,4 +1,4 @@
-package br.com.sldv.config;
+package br.com.sldv.config.ini;
 
 
 import org.springframework.context.annotation.Bean;

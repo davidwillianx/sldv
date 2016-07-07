@@ -28,6 +28,7 @@
         <mockito-version>1.10.19</mockito-version>
         <gson-version>2.6.2</gson-version>
         <jsonpath-version>2.2.0</jsonpath-version>
+        <spring-data-version>1.10.1.RELEASE</spring-data-version>
     </properties>
 
     <dependencies>
@@ -42,6 +43,24 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
             <version>${spring-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>1.9.0.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.1.0.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.39</version>
         </dependency>
 
         <dependency>

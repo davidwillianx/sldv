@@ -1,4 +1,4 @@
-package br.com.sldv.config;
+package br.com.sldv.config.ini;
 
 import br.com.sldv.config.security.AppSecurity;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;

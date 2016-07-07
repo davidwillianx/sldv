@@ -1,6 +1,7 @@
 package br.com.sldv.config;
 
 
+import br.com.sldv.config.ini.App;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
