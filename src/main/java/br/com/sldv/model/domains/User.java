@@ -14,6 +14,9 @@ public class User {
     private String username;
     private String password;
 
+    @Enumerated(EnumType.ORDINAL)
+    private UserPermission permission;
+
 
     public Integer getId() {
         return id;
@@ -37,5 +40,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public UserPermission getPermission() {
+        return permission;
+    }
+
+    public void setPermission(UserPermission permission) {
+        this.permission = permission;
     }
 }
