@@ -1,9 +1,9 @@
-package br.com.sldv.model.services;
+package br.com.sldv.models.services;
 
 
-import br.com.sldv.model.domains.Product;
-import br.com.sldv.model.repositories.ProductRespository;
-import br.com.sldv.model.services.contratcts.ProductBusiness;
+import br.com.sldv.models.domains.Product;
+import br.com.sldv.models.repositories.ProductRespository;
+import br.com.sldv.models.services.contratcts.ProductBusiness;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

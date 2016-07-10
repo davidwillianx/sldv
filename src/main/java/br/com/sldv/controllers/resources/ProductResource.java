@@ -1,7 +1,7 @@
 package br.com.sldv.controllers.resources;
 
 
-import br.com.sldv.model.services.ProductService;
+import br.com.sldv.models.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

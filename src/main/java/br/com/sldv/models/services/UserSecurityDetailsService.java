@@ -1,11 +1,12 @@
-package br.com.sldv.model.services;
+package br.com.sldv.models.services;
 
 
-import br.com.sldv.model.domains.User;
-import br.com.sldv.model.repositories.UserRepository;
+import br.com.sldv.models.domains.User;
+import br.com.sldv.models.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
@@ -14,20 +15,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@Service("UserSecurityDetailsService")
+@Service
 public class UserSecurityDetailsService implements UserDetailsService {
 
     @Autowired
-    UserRepository usuarioRepository;
+    private UserRepository usuarioRepository;
 
     @Override
-    public org.springframework.security.core.userdetails.UserDetails
-      loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String username)
+            throws UsernameNotFoundException {
 
-        User user  = usuarioRepository.findByUsername(username);
+        User user = usuarioRepository.findByUsername(username);
 
-        if(user == null)
-            throw new UsernameNotFoundException("User not found");
+        if(user == null){
+            throw  new UsernameNotFoundException("User not found");
+        }
 
         List<GrantedAuthority> grantedAuthorities;
 
@@ -41,7 +43,8 @@ public class UserSecurityDetailsService implements UserDetailsService {
                 true,
                 true,
                 true,
-                grantedAuthorities);
-
+                grantedAuthorities
+        );
     }
+
 }

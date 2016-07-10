@@ -1,4 +1,4 @@
-package br.com.sldv.model.domains;
+package br.com.sldv.models.domains;
 
 
 import javax.persistence.*;

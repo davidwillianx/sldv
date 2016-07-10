@@ -1,4 +1,4 @@
-package br.com.sldv.model.domains;
+package br.com.sldv.models.domains;
 
 public enum  UserPermission {
     ROLE_ADMIN,

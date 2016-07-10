@@ -1,7 +1,7 @@
-package br.com.sldv.model.services.contratcts;
+package br.com.sldv.models.services.contratcts;
 
 
-import br.com.sldv.model.domains.Product;
+import br.com.sldv.models.domains.Product;
 
 import java.util.List;
 

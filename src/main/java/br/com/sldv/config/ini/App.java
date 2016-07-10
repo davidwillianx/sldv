@@ -22,7 +22,6 @@ public class App extends WebMvcConfigurerAdapter {
         view.setPrefix("/app/views/");
         view.setSuffix(".jsp");
 
-
         return view;
     }
 

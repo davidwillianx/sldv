@@ -19,7 +19,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "br.com.sldv.model")
+@EnableJpaRepositories(basePackages = "br.com.sldv.models")
 public class AppPersistence {
 
     @Bean
@@ -30,7 +30,7 @@ public class AppPersistence {
         em = new LocalContainerEntityManagerFactoryBean();
 
         em.setDataSource(dataSource());
-        em.setPackagesToScan("br.com.sldv.model.domains");
+        em.setPackagesToScan("br.com.sldv.models.domains");
 
         JpaVendorAdapter jpaAdapter;
         jpaAdapter = new HibernateJpaVendorAdapter();
